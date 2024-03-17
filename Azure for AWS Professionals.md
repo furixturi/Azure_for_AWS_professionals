@@ -13,6 +13,7 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/
 - [Regions and zones](#Regions and zones)
 - [Resource management](#Resource management)
 - [Security and identity](#Security and identity)
+- [Monitoring](#Monitoring)
 
 
 
@@ -385,7 +386,7 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/networking
 
 ### CDN
 
-- Amazon CloudFront - **Azure Front Door**
+- Amazon CloudFront/Global Accelerator - **Azure Front Door**
   - global service, deployed to all edge locations
   - attached WAF, DDoS protection, bot protection
   - dynamic and static content acceleration
@@ -458,14 +459,25 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/security-i
 
 ### Cloud security
 
-- **Microsoft Defender for Cloud** (multi-cloud security)
+- Amazon Inspector - **Microsoft Defender for Cloud** (multi-cloud security)
   - a cloud -native application protection platform (CNAPP)
   - provides unified security management and advanced threat protection across hybrid cloud workloads (Azure, AWS, GCP)
     - DevSecOps solution: code level security management
     - CSPM (cloud security posture management) solution: surfaces actions to prevent breach
     - CWPP (cloud workload protection platform): specific protections for servers, containers, storage, databases, etc.
-- **Microsoft Sentinel**
+- Amazon GuardDuty - **Microsoft Sentinel**
   - scalabel, cloud-native solution that provides 
     - SIEM (security information and event management)
     - SOAR (security orchestration, automation, response)
   - attack detection, threat visibility, proactive hunting, threat response
+
+- Encryption
+  - Encrypt at rest: **Azure Storage Service Encryption**
+  - Amazon KMS, CloudHSM - **Azure Key Vault**
+- Amazon Artifact - **Azure Service Trust Portal**
+- AWS Shield - **Azure DDoS Protection Service**
+
+## Monitoring
+
+- Amazon CloudWatch - **Azure Monitor**
+- Amazon CloudTrail - **Azure Activity Log**
