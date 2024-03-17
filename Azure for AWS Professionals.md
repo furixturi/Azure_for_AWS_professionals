@@ -42,16 +42,15 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/compute
 
 ### Virtual Machines
 
-- Amazon EC2 - Azure Virtual Machines
-- VMware Cloud on AWS - Azure VMware Solution
+- Amazon EC2 - **Azure Virtual Machines**
+- VMware Cloud on AWS - **Azure VMware Solution**
   - VMware vSphere-based workload
-- AWS Parallel Cluster - Azure CycleCloud
+- AWS Parallel Cluster - **Azure CycleCloud**
   - HPC clusters
 
 ### Autoscaling
 
-- AWS: Auto Scaling 
-- Azure: Virtual Machine Scale Sets 
+- AWS Auto Scaling - **Azure Virtual Machine Scale Sets** 
   - Layer-4 traffic distribution with **Azure Load Balancer**
   - Layer-7 traffic distribution and TLS termination with **Azure Application Gateway**
   - Orchestration modes
@@ -68,11 +67,11 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/compute
         - Stateful applications
         - mix virtual machine types or Spot and on-demand VMs
         - supports memory preserving update
-- Azure: App Service autoscale
+- **Azure App Service autoscale**
 
 ### Batch Processing
 
-- AWS Batch - Azure Batch
+- AWS Batch - **Azure Batch**
   - no infra (VM) management, no batch scheduler install
   - for large-scale parallel and HPC batch jobs
     - financial risk modeling
@@ -89,7 +88,7 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/compute
 
 - Amazon EBS - **Azure managed disks**
   - Disk types:
-    - Ultra disk: SSD 
+    - Ultra disk: SSD
       - for IO-intensive, transaction-heavy workload (SAP HANA), top tier DB (SQL, Oracle)
       - max size: 65 TB, throughput 10,000 MB/s, IOPs 400,000
     - Premium SSD v2 - best price performance
@@ -116,8 +115,8 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/compute
     - snapshot: only the one disk at the point in time when the snapshot is taken
 
 - Amazon EC2 instance store - **Azure managed disk - temporary disk** role
-- Amazon EBS provisioned IOPS volume - **Azure managed disk - premium SSD v2 **
-- Amazon EFS: Azure Files
+- Amazon EBS provisioned IOPS volume - **Azure managed disk - premium SSD v2**
+- Amazon EFS - **Azure Files**
   - supports SMB, NFS protocol and Azure Files REST API
 
 ### Container
@@ -143,7 +142,7 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/compute
 
 - AWS Lambda - **Azure Functions**
   - Hosting plans
-    - Consumption: 
+    - Consumption
       - timeout: default 5min, max 10min
       - default. auto-scale but cold start when adding instances
     - Premium plan
@@ -232,16 +231,16 @@ Amazon RDS/Aurora -
       - funding to new AI application using CosmosDB and/or Azure Kubernetes Service
 
 - Amazon Keyspaces - **Azure Managed Instance for Apache Cassandra**
-  - fullly managed service for pure open source Aoache Cassandra clusters
+  - fullly managed service for pure open source Apache Cassandra clusters
   - can scale out of existing on-premises or cloud self-hosted Apache Cassandra clusters by adding managed Cassandra datacenters to the existing cluster ring
-- Azure Table
+- **Azure Table**
   - only pay for capacity that's used (unlike Cosmos for Table)
 
-- Amazon ElastiCache / MemoryDB for Redis - Azure Cache for Redis
+- Amazon ElastiCache / MemoryDB for Redis - **Azure Cache for Redis**
 
 ### Database migration
 
-- AWS DMS (+SCT) - Azure Database Migration Service
+- AWS DMS (+SCT) - **Azure Database Migration Service**
 
 ### Analytics and big data
 
@@ -376,7 +375,7 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/networking
 - AWS NAT gateway - **Virtual Network NAT**
 - AWS VPC endpoints - **Private Endpoint**
   - deploy to a subnet and a private IP address is assigned
-  - the service to connect:
+  - services to connect:
     - Azure Storage
     - Azure Cosmos DB
     - Azure SQL Database
@@ -428,7 +427,7 @@ https://learn.microsoft.com/en-us/azure/architecture/aws-professional/resources
 - AWS CloudFormation - **ARM Template**
   - ARM: Azure Resource Manager
   - JSON template
-  - Bicep language or powershell script to deploy and manage resources
+  - **Bicep** language or powershell script to deploy and manage resources
 - Terraform
 - Management interfaces
   - Web
